@@ -18,6 +18,8 @@ app.use(cors());
 
 dotenv.config();
 
+const PORT = process.env.PORT || 5000;
+
 app.post("/api/register", async (req, res) => {
   const user = req.body;
   if (!user?.username || !user?.password || !user?.role) {
@@ -154,7 +156,7 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
   connectDB();
   console.log("Server started at http://localhost:5000");
 });
