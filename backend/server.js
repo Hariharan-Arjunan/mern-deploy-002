@@ -8,6 +8,7 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import verifyJwt from "./middleware/verifyJwt.js";
 import dotenv from "dotenv";
+import path from "path";
 
 const app = express();
 
